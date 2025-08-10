@@ -1,0 +1,298 @@
+[07-Aug-2025 21:41:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'letramento_robotica.aulas' doesn't exist in C:\inetpub\wwwroot\robotica\dashboard.php:5
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\dashboard.php(5): PDO->query('SELECT aulas.*,...')
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\dashboard.php on line 5
+[07-Aug-2025 21:42:49 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'aulas.turma_id' in 'on clause' in C:\inetpub\wwwroot\robotica\dashboard.php:5
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\dashboard.php(5): PDO->query('SELECT aulas.*,...')
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\dashboard.php on line 5
+[07-Aug-2025 21:42:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'aulas.turma_id' in 'on clause' in C:\inetpub\wwwroot\robotica\dashboard.php:5
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\dashboard.php(5): PDO->query('SELECT aulas.*,...')
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\dashboard.php on line 5
+[07-Aug-2025 21:42:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'aulas.turma_id' in 'on clause' in C:\inetpub\wwwroot\robotica\dashboard.php:5
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\dashboard.php(5): PDO->query('SELECT aulas.*,...')
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\dashboard.php on line 5
+[07-Aug-2025 21:42:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'aulas.turma_id' in 'on clause' in C:\inetpub\wwwroot\robotica\dashboard.php:5
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\dashboard.php(5): PDO->query('SELECT aulas.*,...')
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\dashboard.php on line 5
+[07-Aug-2025 21:43:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'aulas.turma_id' in 'on clause' in C:\inetpub\wwwroot\robotica\dashboard.php:5
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\dashboard.php(5): PDO->query('SELECT aulas.*,...')
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\dashboard.php on line 5
+[07-Aug-2025 21:44:42 UTC] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in C:\inetpub\wwwroot\robotica\relatorio.php on line 2
+[07-Aug-2025 21:44:42 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.;C:\php\pear') in C:\inetpub\wwwroot\robotica\relatorio.php:2
+Stack trace:
+#0 {main}
+  thrown in C:\inetpub\wwwroot\robotica\relatorio.php on line 2
+[07-Aug-2025 21:45:21 UTC] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in C:\inetpub\wwwroot\robotica\relatorio.php on line 2
+[07-Aug-2025 21:45:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.;C:\php\pear') in C:\inetpub\wwwroot\robotica\relatorio.php:2
+Stack trace:
+#0 {main}
+  thrown in C:\inetpub\wwwroot\robotica\relatorio.php on line 2
+[07-Aug-2025 22:08:10 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\inetpub\wwwroot\robotica\includes\auth.php on line 2
+[07-Aug-2025 22:08:24 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\inetpub\wwwroot\robotica\includes\auth.php on line 2
+[07-Aug-2025 22:09:05 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\inetpub\wwwroot\robotica\includes\auth.php on line 2
+[07-Aug-2025 22:09:45 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\cadastro_professor.php on line 10
+[07-Aug-2025 22:10:02 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\inetpub\wwwroot\robotica\includes\auth.php on line 2
+[07-Aug-2025 22:11:30 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\inetpub\wwwroot\robotica\includes\auth.php on line 2
+[07-Aug-2025 22:20:25 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\inetpub\wwwroot\robotica\includes\auth.php on line 2
+[07-Aug-2025 22:32:28 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 22:32:28 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 22:32:28 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 22:32:28 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 22:32:28 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[07-Aug-2025 22:32:28 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[07-Aug-2025 22:32:28 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[07-Aug-2025 22:32:28 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[07-Aug-2025 22:32:28 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[07-Aug-2025 22:45:24 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 22:45:24 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 22:45:24 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 22:45:24 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 22:45:24 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[07-Aug-2025 22:45:24 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[07-Aug-2025 22:45:24 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[07-Aug-2025 22:45:24 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[07-Aug-2025 22:45:24 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[07-Aug-2025 22:45:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'escola_id' in 'field list' in C:\inetpub\wwwroot\robotica\cadastro_aluno.php:18
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\cadastro_aluno.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\cadastro_aluno.php on line 18
+[07-Aug-2025 22:48:33 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\inetpub\wwwroot\robotica\includes\auth.php on line 2
+[07-Aug-2025 22:48:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'alunos.escola_id' in 'where clause' in C:\inetpub\wwwroot\robotica\cadastro_aluno.php:114
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\cadastro_aluno.php(114): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\cadastro_aluno.php on line 114
+[07-Aug-2025 22:49:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'escola_id' in 'field list' in C:\inetpub\wwwroot\robotica\cadastro_aluno.php:19
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\cadastro_aluno.php(19): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\cadastro_aluno.php on line 19
+[07-Aug-2025 22:58:16 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'serie_id' in 'field list' in C:\inetpub\wwwroot\robotica\registrar_aula.php:20
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\registrar_aula.php(20): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\registrar_aula.php on line 20
+[07-Aug-2025 22:58:20 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'serie_id' in 'field list' in C:\inetpub\wwwroot\robotica\registrar_aula.php:20
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\registrar_aula.php(20): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\registrar_aula.php on line 20
+[07-Aug-2025 22:58:23 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'serie_id' in 'field list' in C:\inetpub\wwwroot\robotica\registrar_aula.php:20
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\registrar_aula.php(20): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\registrar_aula.php on line 20
+[07-Aug-2025 22:58:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'serie_id' in 'field list' in C:\inetpub\wwwroot\robotica\registrar_aula.php:20
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\registrar_aula.php(20): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\registrar_aula.php on line 20
+[07-Aug-2025 22:59:49 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'serie_id' at row 1 in C:\inetpub\wwwroot\robotica\registrar_aula.php:20
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\registrar_aula.php(20): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\registrar_aula.php on line 20
+[07-Aug-2025 22:59:54 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'serie_id' at row 1 in C:\inetpub\wwwroot\robotica\registrar_aula.php:20
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\registrar_aula.php(20): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\registrar_aula.php on line 20
+[07-Aug-2025 23:00:06 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'escola_id' at row 1 in C:\inetpub\wwwroot\robotica\registrar_aula.php:20
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\registrar_aula.php(20): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\registrar_aula.php on line 20
+[07-Aug-2025 23:00:10 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'escola_id' at row 1 in C:\inetpub\wwwroot\robotica\registrar_aula.php:20
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\registrar_aula.php(20): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\registrar_aula.php on line 20
+[07-Aug-2025 23:00:53 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'escola_id' at row 1 in C:\inetpub\wwwroot\robotica\registrar_aula.php:20
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\registrar_aula.php(20): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\registrar_aula.php on line 20
+[07-Aug-2025 23:10:52 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 23:10:52 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 23:10:52 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 23:10:52 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 23:10:52 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[07-Aug-2025 23:10:52 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[07-Aug-2025 23:10:52 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[07-Aug-2025 23:10:52 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[07-Aug-2025 23:10:52 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[07-Aug-2025 23:10:52 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[07-Aug-2025 23:15:34 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 23:15:34 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 23:15:34 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 23:15:34 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 23:15:34 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[07-Aug-2025 23:15:34 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[07-Aug-2025 23:15:34 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[07-Aug-2025 23:15:34 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[07-Aug-2025 23:15:34 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[07-Aug-2025 23:15:34 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[07-Aug-2025 23:25:06 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in C:\inetpub\wwwroot\robotica\frequencia.php on line 176
+[07-Aug-2025 23:27:07 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in C:\inetpub\wwwroot\robotica\frequencia.php on line 176
+[07-Aug-2025 23:29:57 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 23:29:57 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 23:29:57 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 23:29:57 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 23:29:57 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[07-Aug-2025 23:29:57 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[07-Aug-2025 23:29:57 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[07-Aug-2025 23:29:57 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[07-Aug-2025 23:29:57 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[07-Aug-2025 23:29:57 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[07-Aug-2025 23:32:36 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 23:32:36 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 23:32:36 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 23:32:36 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[07-Aug-2025 23:32:36 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[07-Aug-2025 23:32:36 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[07-Aug-2025 23:32:36 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[07-Aug-2025 23:32:36 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[07-Aug-2025 23:32:36 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[07-Aug-2025 23:32:36 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[07-Aug-2025 23:56:12 UTC] PHP Warning:  require_once(includes/functions.php): Failed to open stream: No such file or directory in C:\inetpub\wwwroot\robotica\login.php on line 7
+[07-Aug-2025 23:56:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'includes/functions.php' (include_path='.;C:\php\pear') in C:\inetpub\wwwroot\robotica\login.php:7
+Stack trace:
+#0 {main}
+  thrown in C:\inetpub\wwwroot\robotica\login.php on line 7
+[07-Aug-2025 23:56:14 UTC] PHP Warning:  require_once(includes/functions.php): Failed to open stream: No such file or directory in C:\inetpub\wwwroot\robotica\login.php on line 7
+[07-Aug-2025 23:56:14 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'includes/functions.php' (include_path='.;C:\php\pear') in C:\inetpub\wwwroot\robotica\login.php:7
+Stack trace:
+#0 {main}
+  thrown in C:\inetpub\wwwroot\robotica\login.php on line 7
+[07-Aug-2025 23:56:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function estaLogado() in C:\inetpub\wwwroot\robotica\login.php:10
+Stack trace:
+#0 {main}
+  thrown in C:\inetpub\wwwroot\robotica\login.php on line 10
+[07-Aug-2025 23:56:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function estaLogado() in C:\inetpub\wwwroot\robotica\login.php:10
+Stack trace:
+#0 {main}
+  thrown in C:\inetpub\wwwroot\robotica\login.php on line 10
+[08-Aug-2025 00:09:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function estaLogado() in C:\inetpub\wwwroot\robotica\login.php:10
+Stack trace:
+#0 {main}
+  thrown in C:\inetpub\wwwroot\robotica\login.php on line 10
+[08-Aug-2025 00:09:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function estaLogado() in C:\inetpub\wwwroot\robotica\login.php:10
+Stack trace:
+#0 {main}
+  thrown in C:\inetpub\wwwroot\robotica\login.php on line 10
+[08-Aug-2025 00:14:01 UTC] PHP Parse error:  syntax error, unexpected token ";" in C:\inetpub\wwwroot\robotica\login.php on line 144
+[08-Aug-2025 00:14:44 UTC] PHP Parse error:  syntax error, unexpected token ";" in C:\inetpub\wwwroot\robotica\login.php on line 144
+[08-Aug-2025 00:47:07 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[08-Aug-2025 00:47:07 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[08-Aug-2025 00:47:07 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[08-Aug-2025 00:47:07 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[08-Aug-2025 00:47:07 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[08-Aug-2025 00:47:07 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[08-Aug-2025 00:47:07 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[08-Aug-2025 00:47:07 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[08-Aug-2025 00:47:07 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[08-Aug-2025 00:47:07 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[08-Aug-2025 00:47:07 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[08-Aug-2025 00:55:58 UTC] PHP Parse error:  Unclosed '[' does not match ')' in C:\inetpub\wwwroot\robotica\cadastro_escola.php on line 28
+[08-Aug-2025 01:03:30 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[08-Aug-2025 01:03:30 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[08-Aug-2025 01:03:30 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[08-Aug-2025 01:03:30 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[08-Aug-2025 01:03:30 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[08-Aug-2025 01:03:30 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[08-Aug-2025 01:03:30 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[08-Aug-2025 01:03:30 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[08-Aug-2025 01:03:30 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[08-Aug-2025 01:03:30 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[08-Aug-2025 01:03:30 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[08-Aug-2025 01:03:30 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[08-Aug-2025 10:57:51 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[08-Aug-2025 10:57:51 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[08-Aug-2025 10:57:51 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[08-Aug-2025 10:57:51 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[08-Aug-2025 10:57:51 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[08-Aug-2025 10:57:51 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[08-Aug-2025 10:57:51 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[08-Aug-2025 10:57:51 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[08-Aug-2025 10:57:51 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[08-Aug-2025 10:57:51 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[08-Aug-2025 10:57:51 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[08-Aug-2025 10:57:51 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[08-Aug-2025 11:07:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'data_aula' in 'field list' in C:\inetpub\wwwroot\robotica\professor.php:38
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\professor.php(38): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\professor.php on line 38
+[08-Aug-2025 11:07:59 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'data_aula' in 'field list' in C:\inetpub\wwwroot\robotica\professor.php:38
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\professor.php(38): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\professor.php on line 38
+[08-Aug-2025 11:13:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'data_aula' in 'field list' in C:\inetpub\wwwroot\robotica\professor.php:38
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\professor.php(38): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\professor.php on line 38
+[08-Aug-2025 11:17:25 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[08-Aug-2025 11:17:25 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[08-Aug-2025 11:17:25 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[08-Aug-2025 11:17:25 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[08-Aug-2025 11:17:25 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[08-Aug-2025 11:17:25 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[08-Aug-2025 11:17:25 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[08-Aug-2025 11:17:25 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[08-Aug-2025 11:17:25 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[08-Aug-2025 11:17:25 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[08-Aug-2025 11:17:25 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[08-Aug-2025 11:17:25 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[08-Aug-2025 11:17:43 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[08-Aug-2025 11:17:43 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[08-Aug-2025 11:17:43 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[08-Aug-2025 11:17:43 UTC] PHP Warning:  Undefined array key "professor_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 62
+[08-Aug-2025 11:17:43 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[08-Aug-2025 11:17:43 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[08-Aug-2025 11:17:43 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[08-Aug-2025 11:17:43 UTC] PHP Warning:  Undefined array key "escola_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 76
+[08-Aug-2025 11:17:43 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[08-Aug-2025 11:17:43 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[08-Aug-2025 11:17:43 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[08-Aug-2025 11:17:43 UTC] PHP Warning:  Undefined array key "turma_id" in C:\inetpub\wwwroot\robotica\dashboard.php on line 90
+[08-Aug-2025 11:19:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'aulas.data_aula' in 'order clause' in C:\inetpub\wwwroot\robotica\dashboard.php:50
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\dashboard.php(50): PDOStatement->execute(Array)
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\dashboard.php on line 50
+[08-Aug-2025 11:21:31 UTC] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in C:\inetpub\wwwroot\robotica\relatorio.php on line 2
+[08-Aug-2025 11:21:31 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.;C:\php\pear') in C:\inetpub\wwwroot\robotica\relatorio.php:2
+Stack trace:
+#0 {main}
+  thrown in C:\inetpub\wwwroot\robotica\relatorio.php on line 2
+[08-Aug-2025 11:23:39 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\inetpub\wwwroot\robotica\dashboard.php on line 226
+[08-Aug-2025 11:27:49 UTC] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in C:\inetpub\wwwroot\robotica\relatorio.php on line 2
+[08-Aug-2025 11:27:49 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.;C:\php\pear') in C:\inetpub\wwwroot\robotica\relatorio.php:2
+Stack trace:
+#0 {main}
+  thrown in C:\inetpub\wwwroot\robotica\relatorio.php on line 2
+[08-Aug-2025 11:31:45 UTC] PHP Warning:  require(vendor/autoload.php): Failed to open stream: No such file or directory in C:\inetpub\wwwroot\robotica\dashboard.php on line 5
+[08-Aug-2025 11:31:45 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'vendor/autoload.php' (include_path='.;C:\php\pear') in C:\inetpub\wwwroot\robotica\dashboard.php:5
+Stack trace:
+#0 {main}
+  thrown in C:\inetpub\wwwroot\robotica\dashboard.php on line 5
+[08-Aug-2025 11:33:13 UTC] PHP Fatal error:  Uncaught Error: Class "Dompdf\Options" not found in C:\inetpub\wwwroot\robotica\vendor\dompdf\dompdf\src\Dompdf.php:258
+Stack trace:
+#0 C:\inetpub\wwwroot\robotica\relatorio.php(16): Dompdf\Dompdf->__construct()
+#1 {main}
+  thrown in C:\inetpub\wwwroot\robotica\vendor\dompdf\dompdf\src\Dompdf.php on line 258
+[08-Aug-2025 11:54:03 UTC] PHP Parse error:  syntax error, unexpected token "endif" in C:\inetpub\wwwroot\robotica\dashboard.php on line 339
