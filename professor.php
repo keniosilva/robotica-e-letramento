@@ -10,6 +10,7 @@ if ($_SESSION['tipo'] !== 'professor') {
 $escolas = $pdo->query("SELECT * FROM escolas")->fetchAll();
 $turmas = $pdo->query("SELECT * FROM turmas")->fetchAll();
 $series = $pdo->query("SELECT * FROM series")->fetchAll();
+$turnos = $pdo->query("SELECT * FROM turnos")->fetchAll();
 
 $alunos = [];
 $aulasAnteriores = [];
@@ -17,18 +18,28 @@ $aulasAnteriores = [];
 $escolaSelecionada = $_GET['escola_id'] ?? '';
 $serieSelecionada = $_GET['serie_id'] ?? '';
 $turmaSelecionada = $_GET['turma_id'] ?? '';
+$turnoSelecionado = $_GET['turno_id'] ?? '';
 
 if (!empty($escolaSelecionada) && !empty($serieSelecionada) && !empty($turmaSelecionada)) {
-    // Carregar alunos
-    $stmt = $pdo->prepare("
-        SELECT id, nome 
-        FROM alunos 
-        WHERE escola_id = ? AND serie_id = ? AND turma_id = ?
-    ");
-    $stmt->execute([$escolaSelecionada, $serieSelecionada, $turmaSelecionada]);
+    // Carregar alunos - removido filtro turno_id se não houver turno selecionado
+    if (!empty($turnoSelecionado)) {
+        $stmt = $pdo->prepare("
+            SELECT id, nome 
+            FROM alunos 
+            WHERE escola_id = ? AND serie_id = ? AND turma_id = ? AND turno_id = ?
+        ");
+        $stmt->execute([$escolaSelecionada, $serieSelecionada, $turmaSelecionada, $turnoSelecionado]);
+    } else {
+        $stmt = $pdo->prepare("
+            SELECT id, nome 
+            FROM alunos 
+            WHERE escola_id = ? AND serie_id = ? AND turma_id = ?
+        ");
+        $stmt->execute([$escolaSelecionada, $serieSelecionada, $turmaSelecionada]);
+    }
     $alunos = $stmt->fetchAll();
 
-    // Carregar aulas anteriores da turma
+    // Carregar aulas anteriores da turma - CORRIGIDO: removido turno_id da query
     $stmt = $pdo->prepare("
         SELECT id, segmento, conteudo, data
         FROM aulas
@@ -113,6 +124,10 @@ $aulasLetramento = array_filter($aulasAnteriores, fn($aula) => $aula['segmento']
     footer {
       box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
     }
+    .loading-spinner {
+      display: none;
+      color: #007bff;
+    }
   </style>
 </head>
 <body>
@@ -141,7 +156,7 @@ $aulasLetramento = array_filter($aulasAnteriores, fn($aula) => $aula['segmento']
     <div class="row">
       <div class="col-md-4">
         <label>Escola:</label>
-        <select name="escola_id" class="form-control" required>
+        <select name="escola_id" id="escola_select" class="form-control" required>
           <option value="">Selecione</option>
           <?php foreach ($escolas as $escola): ?>
             <option value="<?= $escola['id'] ?>" <?= $escolaSelecionada == $escola['id'] ? 'selected' : '' ?>>
@@ -165,14 +180,42 @@ $aulasLetramento = array_filter($aulasAnteriores, fn($aula) => $aula['segmento']
 
       <div class="col-md-4">
         <label>Turma:</label>
-        <select name="turma_id" class="form-control" required>
-          <option value="">Selecione</option>
-          <?php foreach ($turmas as $turma): ?>
-            <option value="<?= $turma['id'] ?>" <?= $turmaSelecionada == $turma['id'] ? 'selected' : '' ?>>
-              <?= $turma['nome'] ?>
-            </option>
-          <?php endforeach; ?>
-        </select>
+        <div class="position-relative">
+          <select name="turma_id" id="turma_select" class="form-control" required>
+            <option value="">Selecione uma escola primeiro</option>
+            <?php if (!empty($escolaSelecionada)): ?>
+              <?php foreach ($turmas as $turma): ?>
+                <?php if ($turma['escola_id'] == $escolaSelecionada): ?>
+                  <option value="<?= $turma['id'] ?>" <?= $turmaSelecionada == $turma['id'] ? 'selected' : '' ?>>
+                    <?= $turma['nome'] ?>
+                  </option>
+                <?php endif; ?>
+              <?php endforeach; ?>
+            <?php endif; ?>
+          </select>
+          <div class="loading-spinner position-absolute top-50 end-0 translate-middle-y me-3">
+            <i class="fas fa-spinner fa-spin"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-4">
+        <label>Turno (opcional):</label>
+        <div class="position-relative">
+          <select name="turno_id" id="turno_select" class="form-control">
+            <option value="">Selecione (opcional)</option>
+            <?php foreach ($turnos as $turno): ?>
+              <option value="<?= $turno['id'] ?>" <?= $turnoSelecionado == $turno['id'] ? 'selected' : '' ?>>
+                <?= $turno['nome'] ?>
+              </option>
+            <?php endforeach; ?>
+          </select>
+          <div class="loading-spinner-turno position-absolute top-50 end-0 translate-middle-y me-3">
+            <i class="fas fa-spinner fa-spin"></i>
+          </div>
+        </div>
       </div>
 
       <div class="col-md-12 mt-3 text-end">
@@ -180,6 +223,38 @@ $aulasLetramento = array_filter($aulasAnteriores, fn($aula) => $aula['segmento']
       </div>
     </div>
   </form>
+
+  <!-- Exibir Escola e Série selecionadas -->
+  <?php if (!empty($escolaSelecionada) && !empty($serieSelecionada) && !empty($turmaSelecionada)): ?>
+    <?php
+      $stmtEscola = $pdo->prepare("SELECT nome FROM escolas WHERE id = ?");
+      $stmtEscola->execute([$escolaSelecionada]);
+      $nomeEscola = $stmtEscola->fetchColumn();
+
+      $stmtSerie = $pdo->prepare("SELECT nome FROM series WHERE id = ?");
+      $stmtSerie->execute([$serieSelecionada]);
+      $nomeSerie = $stmtSerie->fetchColumn();
+
+      $stmtTurma = $pdo->prepare("SELECT nome FROM turmas WHERE id = ?");
+      $stmtTurma->execute([$turmaSelecionada]);
+      $nomeTurma = $stmtTurma->fetchColumn();
+
+      $nomeTurno = '';
+      if (!empty($turnoSelecionado)) {
+        $stmtTurno = $pdo->prepare("SELECT nome FROM turnos WHERE id = ?");
+        $stmtTurno->execute([$turnoSelecionado]);
+        $nomeTurno = $stmtTurno->fetchColumn();
+      }
+    ?>
+    <div class="alert alert-info">
+      <strong>Escola:</strong> <?= htmlspecialchars($nomeEscola) ?><br>
+      <strong>Série:</strong> <?= htmlspecialchars($nomeSerie) ?><br>
+      <strong>Turma:</strong> <?= htmlspecialchars($nomeTurma) ?><br>
+      <?php if (!empty($nomeTurno)): ?>
+        <strong>Turno:</strong> <?= htmlspecialchars($nomeTurno) ?>
+      <?php endif; ?>
+    </div>
+  <?php endif; ?>
 
   <!-- Lista de aulas anteriores - Robótica -->
   <?php if (!empty($aulasRobotica)): ?>
@@ -232,6 +307,7 @@ $aulasLetramento = array_filter($aulasAnteriores, fn($aula) => $aula['segmento']
     <input type="hidden" name="escola_id" value="<?= htmlspecialchars($escolaSelecionada) ?>">
     <input type="hidden" name="serie_id" value="<?= htmlspecialchars($serieSelecionada) ?>">
     <input type="hidden" name="turma_id" value="<?= htmlspecialchars($turmaSelecionada) ?>">
+    <input type="hidden" name="turno_id" value="<?= htmlspecialchars($turnoSelecionado) ?>">
 
     <div class="mb-3">
       <label>Segmento:</label>
@@ -278,5 +354,108 @@ $aulasLetramento = array_filter($aulasAnteriores, fn($aula) => $aula['segmento']
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const escolaSelect = document.getElementById('escola_select');
+    const turmaSelect = document.getElementById('turma_select');
+    const turnoSelect = document.getElementById('turno_select');
+    const loadingSpinner = document.querySelector('.loading-spinner');
+    const loadingSpinnerTurno = document.querySelector('.loading-spinner-turno');
+
+    escolaSelect.addEventListener('change', function() {
+        const escolaId = this.value;
+        
+        // Limpar turmas e turnos
+        turmaSelect.innerHTML = '<option value="">Selecione uma escola primeiro</option>';
+        turnoSelect.innerHTML = '<option value="">Selecione (opcional)</option>';
+        
+        if (escolaId === '') {
+            return;
+        }
+
+        // Mostrar loading para turmas
+        loadingSpinner.style.display = 'block';
+        turmaSelect.disabled = true;
+
+        // Mostrar loading para turnos
+        loadingSpinnerTurno.style.display = 'block';
+        turnoSelect.disabled = true;
+
+        // Carregar turmas
+        fetch(`get_turmas.php?escola_id=${escolaId}`)
+            .then(response => response.json())
+            .then(data => {
+                // Esconder loading
+                loadingSpinner.style.display = 'none';
+                turmaSelect.disabled = false;
+
+                if (data.error) {
+                    turmaSelect.innerHTML = '<option value="">Erro ao carregar turmas</option>';
+                    console.error('Erro:', data.error);
+                    return;
+                }
+
+                // Limpar e popular o select de turmas
+                turmaSelect.innerHTML = '<option value="">Selecione uma turma</option>';
+                
+                if (data.length === 0) {
+                    turmaSelect.innerHTML = '<option value="">Nenhuma turma encontrada</option>';
+                } else {
+                    data.forEach(turma => {
+                        const option = document.createElement('option');
+                        option.value = turma.id;
+                        option.textContent = turma.nome;
+                        turmaSelect.appendChild(option);
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Erro na requisição:', error);
+                loadingSpinner.style.display = 'none';
+                turmaSelect.disabled = false;
+                turmaSelect.innerHTML = '<option value="">Erro ao carregar turmas</option>';
+            });
+
+        // Carregar turnos
+        fetch(`get_turnos.php?escola_id=${escolaId}`)
+            .then(response => response.json())
+            .then(data => {
+                // Esconder loading
+                loadingSpinnerTurno.style.display = 'none';
+                turnoSelect.disabled = false;
+
+                if (data.error) {
+                    turnoSelect.innerHTML = '<option value="">Erro ao carregar turnos</option>';
+                    console.error('Erro:', data.error);
+                    return;
+                }
+
+                // Limpar e popular o select de turnos
+                turnoSelect.innerHTML = '<option value="">Selecione um turno (opcional)</option>';
+                
+                if (data.length === 0) {
+                    turnoSelect.innerHTML = '<option value="">Nenhum turno encontrado</option>';
+                } else {
+                    data.forEach(turno => {
+                        const option = document.createElement('option');
+                        option.value = turno.id;
+                        option.textContent = turno.nome;
+                        turnoSelect.appendChild(option);
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Erro na requisição:', error);
+                loadingSpinnerTurno.style.display = 'none';
+                turnoSelect.disabled = false;
+                turnoSelect.innerHTML = '<option value="">Erro ao carregar turnos</option>';
+            });
+    });
+});
+</script>
+
 </body>
 </html>
+

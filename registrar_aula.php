@@ -13,16 +13,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $turma_id = $_POST['turma_id'] ?? '';
     $serie_id = $_POST['serie_id'] ?? '';
     $conteudo = $_POST['conteudo'] ?? '';
+    $segmento = $_POST['segmento'] ?? '';
+    $professor_id = $_SESSION['usuario_id']; // Adiciona o ID do professor logado
     $presencas = $_POST['presenca'] ?? [];
 
     // ✅ Verificação de campos obrigatórios
-    if (empty($escola_id) || empty($turma_id) || empty($serie_id) || empty($conteudo)) {
+    if (empty($escola_id) || empty($turma_id) || empty($serie_id) || empty($conteudo) || empty($segmento)) {
         die("❌ Todos os campos obrigatórios devem ser preenchidos.");
     }
 
     // 1. Inserir aula
-    $stmt = $pdo->prepare("INSERT INTO aulas (escola_id, turma_id, serie_id, conteudo, data) VALUES (?, ?, ?, ?, NOW())");
-    $stmt->execute([$escola_id, $turma_id, $serie_id, $conteudo]);
+    $stmt = $pdo->prepare("INSERT INTO aulas (escola_id, turma_id, serie_id, conteudo, segmento, professor_id, data) VALUES (?, ?, ?, ?, ?, ?, NOW())");
+    $stmt->execute([$escola_id, $turma_id, $serie_id, $conteudo, $segmento, $professor_id]);
     $aula_id = $pdo->lastInsertId();
 
     // 2. Buscar alunos da turma
@@ -40,9 +42,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Redireciona com sucesso
-    header("Location: professor.php?sucesso=1&turma_id=$turma_id");
+    header("Location: professor.php?sucesso=1&escola_id=$escola_id&serie_id=$serie_id&turma_id=$turma_id");
     exit;
 } else {
     header("Location: professor.php");
     exit;
 }
+
+

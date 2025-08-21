@@ -64,6 +64,15 @@ if ($_SESSION['tipo'] !== 'admin') {
     <div class="col">
       <div class="card h-100 text-center bg-light shadow">
         <div class="card-body">
+          <i class="bi bi-clock-fill" style="font-size: 2rem; color: #007bff;"></i>
+          <h5 class="card-title mt-3">Cadastrar Turno</h5>
+          <a href="cadastro_turno.php" class="btn btn-primary">Acessar</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 text-center bg-light shadow">
+        <div class="card-body">
           <i class="bi bi-person-workspace" style="font-size: 2rem; color: #007bff;"></i>
           <h5 class="card-title mt-3">Cadastrar Professor</h5>
           <a href="cadastro_professor.php" class="btn btn-primary">Acessar</a>
